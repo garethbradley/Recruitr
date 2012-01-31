@@ -5,18 +5,12 @@
   <li>
   <%= link_to(t(:logout), destroy_user_session_path, :method=>'delete') %>
   </li>
-<% else %>
-  <li>
-  <%= link_to(t(:login), new_user_session_path)  %>
-  </li>
-<% end %>
-<% if user_signed_in? %>
   <li>
   <%= link_to(t(:manage_account), edit_user_registration_path) %>
   </li>
 <% else %>
   <li>
-  <%= link_to(t(:sign_up), new_user_registration_path)  %>
+  <%= link_to(t(:login_or_register), new_user_session_path)  %>
   </li>
 <% end %>
 

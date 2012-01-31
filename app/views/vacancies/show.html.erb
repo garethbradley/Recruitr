@@ -3,7 +3,7 @@
 <% end %>
 
 <% content_for :actionbar do %>
-  <%= link_to_function 'Back', "history.back()", :class => 'g-button' %>
+  <%= link_to 'Back to List', vacancies_path, :class => 'g-button' %>
   <%= link_to 'Edit', edit_vacancy_path(@vacancy), :class => 'g-button g-button-red' %>
 <% end %>
 
@@ -26,15 +26,5 @@
 <p>
   <b>Postcode:</b>
   <%= @vacancy.postcode %>
-</p>
-
-<p>
-  <b>User:</b>
-  <%= @vacancy.user_id %>
-</p>
-
-<p>
-  <b>Company:</b>
-  <%= @vacancy.company_id %>
 </p>
 

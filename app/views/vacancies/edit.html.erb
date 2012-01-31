@@ -3,7 +3,7 @@
 <% end %>
 
 <% content_for :actionbar do %>
-  <%= link_to_function 'Back', "history.back()", :class => 'g-button' %>
+  <%= link_to 'Back to List', vacancies_path, :class => 'g-button' %>
   <%= link_to 'Show', @vacancy, :class => 'g-button' %>
 <% end %>
 

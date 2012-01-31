@@ -18,6 +18,7 @@ en:
   sign_up: "Sign Up"
   manage_account: "Manage Profile"
   login: "Login"
+  login_or_register: "Login or Register"
   logout: "Logout"
 
   vacancy_title: "title"
