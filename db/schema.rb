@@ -11,7 +11,17 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120130170609) do
+ActiveRecord::Schema.define(:version => 20120131154541) do
+
+  create_table "postcode_locations", :force => true do |t|
+    t.string   "postcode"
+    t.float    "latitude"
+    t.float    "longitude"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "postcode_locations", ["postcode"], :name => "index_postcode_locations_on_postcode", :unique => true
 
   create_table "users", :force => true do |t|
     t.string   "email",                                 :default => "", :null => false
@@ -44,6 +54,21 @@ ActiveRecord::Schema.define(:version => 20120130170609) do
     t.integer  "company_id"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.text     "job_description"
+    t.text     "job_application_process"
+    t.text     "job_notes"
+    t.text     "job_contact_information"
+    t.string   "job_reports_to"
+    t.text     "job_benefits"
+    t.text     "job_qualifications"
+    t.text     "job_required_experience"
+    t.integer  "job_sector_id"
+    t.integer  "job_type_id"
+    t.float    "salary_min"
+    t.float    "salary_max"
+    t.float    "salary_ote"
+    t.float    "salary_bonus"
+    t.float    "fees"
   end
 
 end
