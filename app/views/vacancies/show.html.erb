@@ -1,0 +1,40 @@
+<% content_for :title do %>
+  <%= @vacancy.title %>
+<% end %>
+
+<% content_for :actionbar do %>
+  <%= link_to_function 'Back', "history.back()", :class => 'g-button' %>
+  <%= link_to 'Edit', edit_vacancy_path(@vacancy), :class => 'g-button g-button-red' %>
+<% end %>
+
+
+<p>
+  <b>Title:</b>
+  <%= @vacancy.title %>
+</p>
+
+<p>
+  <b>External vacancy number:</b>
+  <%= @vacancy.external_vacancy_number %>
+</p>
+
+<p>
+  <b>Location:</b>
+  <%= @vacancy.location %>
+</p>
+
+<p>
+  <b>Postcode:</b>
+  <%= @vacancy.postcode %>
+</p>
+
+<p>
+  <b>User:</b>
+  <%= @vacancy.user_id %>
+</p>
+
+<p>
+  <b>Company:</b>
+  <%= @vacancy.company_id %>
+</p>
+

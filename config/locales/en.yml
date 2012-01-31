@@ -1,0 +1,28 @@
+# Sample localization file for English. Add more files in this directory for other locales.
+# See https://github.com/svenfuchs/rails-i18n/tree/master/rails%2Flocale for starting points.
+
+en:
+  home: "Home"
+  email: "email"
+  password: "password"
+  forename: "forename"
+  surname: "surname"
+  current_password: "current password"
+  new_password: "new password"
+  confirm_password: "confirm password"
+  remember_me: "remember me"
+  btn_sign_in: "Sign In"
+  btn_create_account: "Create Account"
+  btn_update_account: "Update Account"
+  link_forgot_password: "forgotten your password?"
+  sign_up: "Sign Up"
+  manage_account: "Manage Profile"
+  login: "Login"
+  logout: "Logout"
+
+  vacancy_title: "title"
+  vacancy_external_number: "vacancy #"
+  vacancy_location: "location"
+  vacancy_postcode: "postcode"
+  btn_create_vacancy: "Create Vacancy"
+

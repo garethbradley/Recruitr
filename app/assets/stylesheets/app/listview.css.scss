@@ -1,0 +1,28 @@
+div#content_container {
+    position: relative;
+    overflow: hidden;
+}
+
+table.listview {
+    width: 100%;
+    border-collapse:collapse;
+
+    td {
+        height: 29px;
+    }
+
+    th {
+        font-size: 11px;
+        text-transform: uppercase;
+    }
+
+    td, th {
+        border-bottom: 1px solid #dcdcdc;
+        text-align: left;
+    }
+
+    tbody tr.highlighted {
+        background-color: #ffffd6;
+    }
+}
+

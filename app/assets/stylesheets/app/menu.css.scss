@@ -1,0 +1,57 @@
+header#user {
+    nav {
+        text-align: right;
+        margin: 0 10px 0 0;
+
+        ul {
+            padding: 0;
+            margin: 0;
+
+            li {
+                list-style-type: none;
+                display: inline;
+                padding: 0 20px 0 0;
+            }
+
+            li a:link {
+                color: white;
+            }
+
+            li a:visited {
+                color: white;
+            }
+        }
+    }
+}
+
+section#navmenu {
+    margin: 0 10px 0 0;
+    float: left;
+    width: 145px;
+
+    h3 {
+        font-size: 16px;
+        font-weight: bold;
+
+        padding: 10px 0 0 0;
+        margin: 0;
+    }
+
+    nav {
+        text-align: left;
+        margin: 0;
+        padding: 0;
+
+        ul {
+            padding: 0;
+            margin: 10px 0 0 30px;
+
+            li {
+                list-style-type: none;
+                padding: 0;
+                margin: 0 0 10px 0;
+            }
+        }
+    }
+}
+

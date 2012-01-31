@@ -1,0 +1,27 @@
+<%= form_for(@vacancy) do |f| %>
+  <%= render :partial => "shared/error_explanation", :locals => { :object => @vacancy } %>
+
+  <table border="0" cellpadding="0" cellspacing="0" class="inputform">
+    <tr>
+      <td class="label"><%= f.label t :vacancy_title %></td>
+      <td class="input"><%= f.text_field :title, :class => 'themed' %></td>
+    </tr>
+    <tr>
+      <td class="label"><%= f.label t :vacancy_external_number %></td>
+      <td class="input"><%= f.text_field :external_vacancy_number, :class => 'themed' %></td>
+    </tr>
+    <tr>
+      <td class="label"><%= f.label t :vacancy_location %></td>
+      <td class="input"><%= f.text_field :location, :class => 'themed' %></td>
+    </tr>
+    <tr>
+      <td class="label"><%= f.label t :vacancy_postcode %></td>
+      <td class="input"><%= f.text_field :postcode, :class => 'themed' %></td>
+    </tr>
+    <tr>
+      <td class="label">&nbsp;</td>
+      <td class="input"><%= f.submit t(:btn_create_vacancy), :class => 'g-button g-button-submit' %></td>
+    </tr>
+  </table>
+<% end %>
+

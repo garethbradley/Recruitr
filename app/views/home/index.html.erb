@@ -1,0 +1,21 @@
+<% content_for :title do %>
+Welcome
+<% end %>
+
+<% content_for :actionbar do %>
+<% end %>
+
+<p>
+  Welcome to <strong><%= app_title %></strong>, the easiest recruitment
+  management tool on the planet! Sign up for an account using the links above
+  or <%= link_to 'click here', new_user_session_path %>.
+</p>
+<p>
+  Once you have logged in, you can navigate using the menu on the left. That's
+  all there is to it!
+</p>
+<p>
+  Happy Recruiting<br />
+  <i>Your friendly <%= app_title %> team</i>
+</p>
+

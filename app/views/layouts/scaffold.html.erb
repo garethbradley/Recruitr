@@ -1,0 +1,20 @@
+<% content_for :content do %>
+
+      <div class="actionbar clearfix">
+        <header>
+          <h1><%= yield :title %></h1>
+        </header>
+        <div class="buttons">
+          <%= yield :actionbar %>
+        </div>
+      </div>
+      <hr />
+      <div id="content_wrapper" class="clearfix">
+        <%= render 'shared/menu' %>
+        <div id="content_container">
+          <%= content_for?(:content) ? yield(:content) : yield %>
+        </div>
+      </div>
+<% end %>
+<%= render :template => 'layouts/application' %>
+

@@ -1,0 +1,10 @@
+<% content_for :title do %>
+Manage Vacancies
+<% end %>
+
+<% content_for :actionbar do %>
+  <%= link_to 'Create Vacancy', new_vacancy_path, :class => 'g-button g-button-red' %>
+<% end %>
+
+<%= render :partial => "list", :locals => {:vacancies => @vacancies} %>
+

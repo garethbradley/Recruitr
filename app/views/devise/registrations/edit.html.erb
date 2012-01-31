@@ -1,0 +1,48 @@
+<% content_for :title do %>
+  <%= t :manage_account %>
+<% end %>
+
+<div id="registrations_container">
+  <%= form_for(resource, :as => resource_name, :url => registration_path(resource_name), :html => { :method => :put }) do |f| %>
+    <%= devise_error_messages! %>
+    <table border="0" cellpadding="0" cellspacing="0" class="inputform">
+      <tr>
+        <td class="label"><%= f.label t :forename %></td>
+        <td class="input"><%= f.text_field :forename, :class => 'themed' %></td>
+      </tr>
+      <tr>
+        <td class="label"><%= f.label t :surname %></td>
+        <td class="input"><%= f.text_field :surname, :class => 'themed' %></td>
+      </tr>
+      <tr>
+        <td class="label"><%= f.label t :email %></td>
+        <td class="input"><%= f.email_field :email, :class => 'themed' %></td>
+      </tr>
+      <tr>
+        <td class="label"><%= f.label t :current_password %></td>
+        <td class="input"><%= f.password_field :current_password, :class => 'themed' %></td>
+      </tr>
+      <tr>
+        <td class="label"><%= f.label t :new_password %></td>
+        <td class="input"><%= f.password_field :password, :class => 'themed' %></td>
+      </tr>
+      <tr>
+        <td class="label"><%= f.label t :confirm_password %></td>
+        <td class="input"><%= f.password_field :password_confirmation, :class => 'themed' %></td>
+      </tr>
+      <tr>
+        <td class="label">&nbsp;</td>
+        <td class="input"><%= f.submit t(:btn_update_account), :class => 'g-button g-button-submit' %></td>
+      </tr>
+      <tr>
+        <td colspan="2" class="hr"><hr class="feature" /></td>
+      </tr>
+      <tr>
+        <td class="label"><h3>Unhappy?</h3></td>
+        <td class="input"><%= link_to "Delete my account", registration_path(resource_name), :confirm => "Are you sure?", :method => :delete, :class => 'g-button g-button-red' %></td>
+      </tr>
+    </table>
+  <% end %>
+
+</div>
+

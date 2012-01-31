@@ -1,0 +1,42 @@
+$session_block_width: 450px;
+
+@mixin inlineblock($width) {
+  float: left;
+  width: $width;
+  margin: 0;
+  padding: 0;
+}
+
+#session_container {
+    position: relative;
+    margin: 0 auto;
+    width: (($session_block_width * 2) + 1);
+
+    h1 {
+        margin: 0 0 60px 20px;
+    }
+
+    div.left {
+        @include inlineblock($session_block_width);
+    }
+
+    div.right {
+        @include inlineblock($session_block_width);
+        border-left: 1px solid #DDD;
+    }
+}
+
+#registrations_container {
+    position: relative;
+    margin: 0 auto;
+    width: $session_block_width;
+
+    h1 {
+        margin: 0 0 10px 20px;
+    }
+
+    div.left {
+        @include inlineblock($session_block_width);
+    }
+}
+

@@ -1,0 +1,127 @@
+$footer-height: 30px;
+
+html, body {
+    font-family: arial, helvetica, sans-serif;
+    padding: 0;
+    margin: 0;
+    color: #333;
+
+    min-width: 100%;
+    width: 100%;
+    height: 100%;
+
+    position: absolute;
+}
+
+div, header, footer {
+    padding: 0;
+    margin: 0;
+}
+
+div#wrapper {
+    min-height: 100%;
+    position: relative;
+    width: 100%;
+}
+
+header#user {
+    height: 20px;
+    width: 100%;
+    background-color: #222;
+    overflow: hidden;
+
+    padding: 0;
+    margin: 0;
+
+}
+
+header#logo {
+    position: relative;
+    height: 80px;
+    width: 100%;
+
+    background-color: #F6F6F6;
+    border-bottom: 1px solid #E5E5E5;
+
+    div#search {
+        position: absolute;
+        top: 25px;
+        left: 40px;
+        float: left;
+    }
+}
+
+footer {
+    position: absolute;
+    bottom: 0;
+
+    height: $footer-height;
+    width: 100%;
+
+    background-color: #F6F6F6;
+    border-top: 1px solid #E5E5E5;
+
+    div {
+      color: #888;
+      line-height: $footer-height;
+      margin: 0 20px;
+    }
+}
+
+section#main {
+    padding: 20px 20px 40px 20px;
+    margin: 0;
+}
+
+section#flash_messages
+{
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+}
+
+div#content_wrapper {
+    padding: 20px 0 0 0;
+    position: relative;
+}
+
+/* Clearing floats without extra markup
+   Based on How To Clear Floats Without Structural Markup by PiE
+   [http://www.positioniseverything.net/easyclearing.html] */
+
+.clearfix:after, .container:after {
+  content: "\0020";
+  display: block;
+  height: 0;
+  clear: both;
+  visibility: hidden;
+  overflow:hidden;
+}
+.clearfix, .container {display: block;}
+
+/* Regular clearing
+   apply to column that should drop below previous ones. */
+
+.clear { clear:both; }
+
+img.logo {
+    float: right;
+    margin-right: 20px;
+}
+
+div.actionbar {
+    height: 47px;
+
+    header {
+        float: left;
+        width: 50%;
+        line-height: 47px;
+
+    }
+
+    div.buttons {
+        float: right;
+        text-align: right;
+    }
+}
+

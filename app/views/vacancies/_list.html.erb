@@ -1,0 +1,11 @@
+<%= table_for vacancies, :html => { :class => "listview" } do -%>
+  <% columns :title %>
+  <% column :external_vacancy_number, :title => "Vacancy #", :width => "100px" %>
+  <% column :location, :width => "200px" %>
+  <% column :title => "Actions", :width => "150px" do |vacancy| %>
+    <% [link_to("Show", vacancy),
+        link_to('Edit', edit_vacancy_path(vacancy)),
+        link_to('Destroy', vacancy, confirm: 'Are you sure?', method: :delete)].join(" | ").html_safe %>
+  <% end %>
+<% end %>
+

@@ -1,0 +1,11 @@
+<% content_for :title do %>
+  Editing vacancy
+<% end %>
+
+<% content_for :actionbar do %>
+  <%= link_to_function 'Back', "history.back()", :class => 'g-button' %>
+  <%= link_to 'Show', @vacancy, :class => 'g-button' %>
+<% end %>
+
+<%= render 'form' %>
+

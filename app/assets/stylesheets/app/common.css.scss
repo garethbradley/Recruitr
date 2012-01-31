@@ -1,0 +1,129 @@
+$link_colour: #4787F0;
+$title_colour: #DD4B39;
+
+@mixin error_colours {
+    border: 1px solid $title_colour;
+    background-color: #fff3f3;
+}
+
+@mixin notice_colours {
+    border: 1px solid #2a2;
+    background-color: #f3fff3;
+}
+
+h1 {
+    font-family: ArialImport;
+    color: $title_colour;
+    font-size: 30px;
+    padding: 0;
+    margin: 0;
+    line-height: 30px;
+}
+
+hr {
+    border: 0;
+    color: #dcdcdc;
+    background-color: #dcdcdc;
+    height: 1px;
+}
+
+hr.feature {
+    color: $title_colour;
+    background-color: $title_colour;
+}
+
+input.themed {
+    width: 240px;
+    border: 1px solid #DDD;
+    line-height: 29px;
+    height: 29px;
+    font-size: 20px;
+    font-family: EurofurenceLight;
+    padding: 0 5px;
+}
+
+input[type='password'].themed {
+    font-family: ArialImport;
+}
+
+label {
+    text-transform: lowercase;
+    font-size: 22px;
+    display: inline-block;
+}
+
+div.field_with_errors {
+    input.themed {
+        @include error_colours;
+    }
+}
+
+table.inputform tr td {
+    padding-bottom: 20px;
+}
+
+table.inputform tr td.label {
+    width: 200px;
+    vertical-align: middle;
+    text-align: right;
+    padding-right: 10px;
+}
+
+table.inputform tr td.input {
+    width: 230px;
+
+    input.themed {
+        width: 220px;
+    }
+}
+
+table.inputform tr td.hr {
+    height: 1px;
+    padding: 0;
+    margin: 0;
+
+
+}
+
+a:link, a:visited {
+    color: $link_colour;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+#error_explanation {
+    @include error_colours;
+    padding: 10px 20px;
+    margin: 20px 0px;
+
+    font-family: ArialImport;
+    font-size: 14px;
+    h2 {
+        font-size: 18px;
+    }
+}
+
+section#flash_messages {
+    div#flash_alert {
+        @include error_colours;
+    }
+
+    div#flash_notice {
+        @include notice_colours;
+    }
+
+    div {
+        position: relative;
+
+        border-width: 0 0 1px 0 !important;
+        width: 100%;
+        padding: 0 20px;
+
+        height: 30px;
+        line-height: 30px;
+    }
+}
+
